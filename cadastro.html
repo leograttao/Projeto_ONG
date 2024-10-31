@@ -16,16 +16,33 @@
 
     <h2>Cadastro</h2>
     
-        <form class="perguntas" action="cadastro.php" method="POST">
-            Nome <br> <input type="text" name="name" id="txtName" class="caixinhas" required> <br>
-            Data de nascimento <br> <input type="date" name="data_nascimento" id="dataNasc" class="caixinhas" required> <br>
-            Endereço <br> <input type="text" name="endereco" id="endereco" class="caixinhas" required> <br>
-            CEP <br> <input type="number" name="cep" class="caixinhas" required> <br>
-            CPF <br> <input type="number" name="cpf" class="caixinhas" required> <br>
-            Email <br> <input type="email" name="email" class="caixinhas" required> <br>
-            Telefone <br> <input type="tel" name="telefone" class="caixinhas" required> <br>
-            Senha <br> <input type="password" name="senha" class="caixinhas" required> <br>
-            <input type="submit" class="cadastrar" value="Enviar">
-        </form>
+    <form class="perguntas" action="cadastro.php" method="POST">
+        Nome <br>
+        <input type="text" name="name" id="txtName" class="caixinhas" placeholder="Ex: João da Silva" required> <br>
+        
+        Data de nascimento <br>
+        <input type="date" name="data_nascimento" id="dataNasc" class="caixinhas" required> <br>
+        
+        Endereço <br>
+        <input type="text" name="endereco" id="endereco" class="caixinhas" placeholder="Ex: Rua das Flores, 123" required> <br>
+        
+        CEP <br>
+        <input type="text" name="cep" class="caixinhas" placeholder="Ex: 12345-678" required> <br>
+        
+        CPF <br>
+        <input type="text" name="cpf" class="caixinhas" placeholder="Ex: 123.456.789-00" required> <br>
+        
+        Email <br>
+        <input type="email" name="email" class="caixinhas" placeholder="Ex: exemplo@dominio.com" required> <br>
+        
+        Telefone <br>
+        <input type="tel" name="telefone" class="caixinhas" placeholder="Ex: (11) 91234-5678" required> <br>
+        
+        Senha <br>
+        <input type="password" name="senha" class="caixinhas" placeholder="Min. 8 caracteres" required> <br>
+        
+        <input type="submit" class="cadastrar" value="Enviar">
+    </form>
+    
 </body>
 </html>
