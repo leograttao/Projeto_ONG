@@ -1,0 +1,223 @@
+:root {
+    --amarelo: #f4d06f;
+    --laranja: #ff8811;
+    --verde: #9dd9d2;
+    --bege: #fff8f0;
+    --azul_marinho: #392f5a;
+}
+
+body {
+    background-color: var(--bege);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    background-color: var(--verde);
+    height: 120px;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Playfair Display';
+    color: var(--azul_marinho);
+    border-bottom: 3px solid #333;
+}
+
+.link_menu {
+    font-size: 16px;
+    background-color: var(--verde);
+    text-decoration: none;
+    border: #392f5a;
+    border-radius: 25px;
+    border-style: solid;
+    padding: 10px;
+    color: var(--azul_marinho);
+}
+:hover.link_menu{
+    background-color: var(--bege);
+    color: var(--azul_marinho);
+    transition: background-color 0.7s ease, transform 0.5s ease;
+}
+.titulo {
+    font-size: 28px;
+}
+
+.botao_hamburguer {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.donation-form-container {
+    background-color: white;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #392f5a;
+    font-size: 16px;
+}
+
+.donation-form-container input,
+.donation-form-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px; /* Arredonda os campos */
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Para garantir que o padding seja contabilizado */
+}
+
+.donation-form-container button {
+    background-color: var(--laranja);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px; /* Arredonda o botão */
+    cursor: pointer;
+    width: 100%;
+}
+
+.donation-form-container button:hover {
+    background-color: var(--amarelo);
+}
+
+.chart-container {
+    width: 30%;
+    height: 300px;
+    margin-left: 20px;
+}
+
+#donationChart, #foodDonationChart {
+    max-width: 100%;
+    height: 100%; 
+}
+
+/* Menu Lateral */
+.menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--azul_marinho);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 70px; /* Aumente o padding-top para dar mais espaço ao botão de fechar */
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.menu-lateral .fechar {
+    position: absolute;
+    top: 1px;
+    right: 20px;
+    font-size: 25px;
+    color: var(--bege); /* Cor do texto */
+    background: none; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 10; /* Certifique-se de que o botão fique acima do conteúdo */
+}
+
+.menu-lateral a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--azul_marinho);
+    display: block;
+    margin: 10px 0;
+    background-color: var(--verde);
+    transition: 0.3s;
+    text-align: center;
+}
+.menu-lateral .fechar:hover {
+    color: var(--amarelo);
+}
+.menu-lateral a:hover {
+    background-color: var(--laranja);
+    color: var(--azul_marinho);
+    transform: scale(1.05);
+}
+footer {
+    background-color: var(--verde);
+    color: var(--azul_marinho);
+    padding: 1px 0; 
+    margin-top: 10px; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; 
+    padding: 10px 0;
+    border-bottom: 3px solid #333;
+}
+
+.footer-info, .footer-img, .footer-social {
+    flex: 1;
+    padding: 5px; 
+    text-align: center; 
+}
+
+.footer-img img {
+    width: 105;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.footer-social {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    gap: 8px; 
+    padding-right: 20px; 
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--azul_marinho);
+    text-decoration: none;
+    flex-direction: row-reverse; 
+    font-size: 22px;
+}
+
+.footer-icon {
+    width: 37px; 
+    height: 37px;
+    margin-left: 12px; 
+    transition: transform 0.3s;
+}
+
+.footer-social a:hover .footer-icon {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}

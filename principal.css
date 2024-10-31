@@ -1,0 +1,773 @@
+:root {
+    --amarelo: #f4d06f;
+    --laranja: #ff8811;
+    --verde: #9dd9d2;
+    --bege: #fff8f0;
+    --azul_marinho: #392f5a;
+}
+
+body {
+    background-color: var(--bege);
+    margin: 0;
+    padding: 0;
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+header {
+    display: flex;
+    background-color: var(--verde);
+    height: 120px;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Playfair Display', serif;
+    color: var(--azul_marinho);
+    border-bottom: 3px solid #333;
+    position: fixed;        
+    top: 0;                
+    left: 0;             
+    width: 97%;             
+    z-index: 10;           
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+main {
+    padding-top: 20px;     
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.link_menu {
+    font-size: 16px;
+    background-color: var(--verde);
+    text-decoration: none;
+    border: 1px solid var(--azul_marinho);
+    border-radius: 25px;
+    padding: 10px;
+    color: var(--azul_marinho);
+    transition: background-color 0.7s ease, transform 0.5s ease;
+}
+
+.link_menu:hover {
+    background-color: var(--laranja);
+    color: var(--azul_marinho);
+}
+
+.titulo {
+    font-size: 28px;
+}
+
+.botao_hamburguer {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--azul_marinho);
+    overflow-x: hidden;
+    transition: width 0.5s; 
+    padding-top: 70px;
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Encode Sans Expanded', sans-serif;
+    z-index: 20;             
+}
+
+.menu-lateral .fechar {
+    position: absolute;
+    top: 1px;
+    right: 20px;
+    font-size: 25px;
+    color: var(--bege);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu-lateral .fechar:hover {
+    color: var(--laranja);
+}
+
+.menu-lateral a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--azul_marinho);
+    display: block;
+    margin: 10px 0;
+    background-color: var(--verde);
+    transition: 0.3s;
+}
+
+.menu-lateral a:hover {
+    background-color: var(--laranja);
+    color: var(--azul_marinho);
+    transform: scale(1.05);
+}
+
+
+.faq-container {
+    max-width: 800px;
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid var(--laranja); 
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.faq-container h1 {
+    display: flex;
+    align-items: center;
+}
+
+.faq-image {
+    width: 200px; 
+    height: 200px; 
+    margin-right: 10px; 
+}
+
+
+
+details {
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 1.2em;
+    color: var(--azul_marinho);
+    padding: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+}
+
+summary:hover {
+    background-color: var(--laranja);
+    color: var(--azul_marinho);
+}
+
+
+
+.faq-content {
+    padding: 0 10px;
+    color: #555;
+    font-weight: normal;
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height 0.3s ease, padding 0.3s ease; 
+}
+
+
+.faq-title {
+    cursor: pointer; 
+    background-color: #f1f1f1; 
+    border: 1px solid #ccc; 
+    padding: 15px; 
+    margin: 5px 0; 
+    border-radius: 5px; 
+    font-size: 16px;
+}
+
+
+.faq-title:hover {
+    background-color: var(--laranja); 
+}
+
+
+details[open] .faq-content {
+    max-height: 500px; 
+    padding-top: 10px; 
+    padding-bottom: 10px;
+}
+
+
+.contact-info {
+    width: 1000px;
+    margin-top: 40px; 
+    margin-bottom: 65px;
+    padding: 20px; 
+    border: 2.5px solid var(--verde); 
+    border-radius: 5px; 
+    background-color: white; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.contact-info p {
+    color: var(--azul_marinho); 
+}
+
+
+
+.mapa {
+    width: 100%; 
+    height: 300px; 
+    border: 0;
+    border-radius: 5px; 
+    box-shadow: 1 2px 10px rgba(0, 0, 0, 0.1); 
+    margin-top: 15px; 
+}
+
+footer {
+    background-color: var(--verde);
+    color: var(--azul_marinho);
+    padding: 1px 0; 
+    margin-top: 10px; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; 
+    padding: 10px 0;
+    border-bottom: 3px solid #333;
+}
+
+.footer-info, .footer-img, .footer-social {
+    flex: 1;
+    padding: 5px; 
+    text-align: center; 
+}
+
+.footer-img img {
+    width: 105;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.footer-social {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    gap: 8px; 
+    padding-right: 20px; 
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--azul_marinho);
+    text-decoration: none;
+    flex-direction: row-reverse; 
+    font-size: 22px;
+}
+
+.footer-icon {
+    width: 37px; 
+    height: 37px;
+    margin-left: 12px; 
+    transition: transform 0.3s;
+}
+
+.footer-social a:hover .footer-icon {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+.faq-container h1 {
+    display: flex;
+    align-items: center; 
+}
+
+.faq-image {
+    width: 50px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+.banner-section {
+    position: relative;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; 
+    margin-top: 120px;
+}
+
+.banner-section h1 {
+    z-index: 1;
+}
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0; 
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); 
+    transition: opacity 1s ease-in-out; 
+    opacity: 0; 
+}
+
+.banner-image.active {
+    opacity: 1; 
+}
+
+.banner-title {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    color: #fff; 
+}
+
+.recommended-ongs {
+    margin: 20px 0; 
+    padding: 20px;
+    background-color: var(--verde);
+    border-radius: 8px;
+    height: 450px;
+}
+
+.recommended-ongs h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.ong-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ong-item {
+    flex: 1 1 250px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.ong-item h3 {
+    font-size: 22px;
+    color: var(--azul_marinho);
+}
+
+.ong-item p {
+    font-size: 16px;
+    color: var(--azul_marinho);
+}
+
+.ong-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: var(--laranja);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.ong-link:hover {
+    background-color: #ff4500;
+}
+
+.creche-parceira {
+    margin: 20px 0 0 0; 
+    padding: 20px;
+    border: 3px solid var(--azul_marinho);
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 70%;
+}
+
+
+.creche-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.creche-header h2 {
+    font-size: 32px;
+    color: #000000;
+    margin: 0;
+}
+
+.creche-parceira h3 {
+    font-size: 42px;
+    color: var(--azul_marinho);
+    margin: 10px 0;
+}
+
+.creche-parceira p {
+    font-size: 16px;
+    color: var(--azul_marinho);
+    line-height: 1.5;
+}
+
+.creche-parceira .creche-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: var(--laranja);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.creche-parceira .creche-link:hover {
+    background-color: #ff4500;
+}
+
+.denuncia-container {
+    background-color: rgb(255, 215, 215); 
+    border: 2px solid #ff4757; 
+    border-radius: 8px; 
+    padding: 20px; 
+    text-align: center; 
+    margin-top: 30px;
+    margin-bottom: 5px;
+    width: 70%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.denuncia-header {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; 
+}
+
+.denuncia-button {
+    background-color: red; 
+    color: white; 
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-size: 16px;
+    margin-top: 20px; 
+}
+
+.denuncia-button:hover {
+    background-color: var(--azul_marinho); 
+}
+
+.denuncia-icon {
+    display: block; 
+    margin-right: 10px;
+    width: 70px; 
+    height: auto;
+}
+
+.denuncia-title {
+    text-align: center; 
+    margin: 30px 0 10px 0;
+    font-size: 40px;
+    color: red;
+    margin-bottom: 25px;
+}
+
+.denuncia-description {
+    text-align: center; 
+    margin-bottom: 20px; 
+    color: black;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.denuncia-header h2 {
+    font-size: 32px; 
+    margin: 0; 
+}
+
+.doar-list {
+    margin-top: 20px;
+    width: 3000px;
+    justify-content: center;
+}
+
+
+.doar-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 80px;
+
+}
+
+.doar-icon {
+    width: 80px; 
+    height: 80px; 
+    margin-right: 10px;
+}
+
+
+.doar {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--laranja);
+    border-radius: 8px;
+}
+
+.doar h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.doar-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 900px;
+    margin-right: 900px;
+}
+
+.doar h3 {
+    font-size: 40px;
+}
+
+.antes-depois-section {
+    text-align: center;
+    margin: 10px auto;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    background-color: white;
+    border: 2.5px solid #00ffd5;
+    border-radius: 8px;
+    max-width: 1800px; 
+    width: 60%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.antes-depois-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: black;
+    text-align: left; 
+    display: flex;
+    align-items: center; 
+}
+
+.antes-depois-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.antes-depois-item {
+    display: flex;
+    gap: 10px;
+}
+
+.antes-depois-imagem {
+    width: 200px; 
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.antes-depois-botao {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--laranja);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.antes-depois-botao:hover {
+    background-color: #ff4500;
+}   
+
+
+.titulo-icone {
+    width: 82px; 
+    height: 82px;
+    margin-right: 10px; 
+}
+
+.doacao-animais-section {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff4e6;
+    border: 2px solid #ff8800;
+    border-radius: 8px; 
+    width: 1000px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.doacao-animais-section h2 {
+    font-size: 28px;
+    color: black;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+.descricao-doacao {
+    font-size: 16px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.doacao-botao {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff8800;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.doacao-botao:hover {
+    background-color: #ff4500;
+}
+.adocao-animais-section {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #e6f7ff; 
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 1000px;
+}
+
+.adocao-animais-section h2 {
+    font-size: 28px;
+    color: black;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.descricao-adocao {
+    font-size: 16px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.adocao-botao {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--laranja);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.adocao-botao:hover {
+    background-color: #ff4500; 
+}
+
+.veterinaria-parceira {
+    margin: 20px 0;
+    padding: 20px;
+    border: 3px solid var(--azul_marinho);
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 70%;
+}
+
+.veterinaria-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.veterinaria-header h2 {
+    font-size: 32px;
+    color: #000000;
+    margin: 0;
+}
+
+.veterinaria-parceira h3 {
+    font-size: 42px;
+    color: var(--azul_marinho);
+    margin: 10px 0;
+}
+
+.veterinaria-parceira p {
+    font-size: 16px;
+    color: var(--azul_marinho);
+    line-height: 1.5;
+}
+
+.veterinaria-parceira .veterinaria-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: var(--laranja);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.veterinaria-parceira .veterinaria-link:hover {
+    background-color: #ff4500;
+}
