@@ -10,7 +10,7 @@ body {
     background-color: var(--bege);
     margin: 0;
     padding: 0;
-}   
+}
 
 header {
     display: flex;
@@ -49,88 +49,27 @@ header {
     cursor: pointer;
 }
 
-.form-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 120px); /* Adiciona altura mínima ao contêiner */
-    padding: 50px 0; /* Adiciona espaçamento em cima e embaixo */
-}
-
-.form-container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px var(--azul_marinho);
-    width: 30%;
-    margin: 20px; /* Adiciona espaço externo ao redor do formulário */
-    margin-top: 20px;
-}
-
-h2 {
+.galeria {
+    padding: 20px;
     text-align: center;
-    color: var(--azul_marinho);
-    font-family: 'Playfair Display';
-    margin-bottom: 20px;
-    font-size: 28px;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-    color: var(--azul_marinho);
-    font-weight: 600;
-    font-size: 22px;
+.imagem-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-input, select, textarea {
+.imagem-creche {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-textarea {
-    height: 100px;
-}
-
-.submit {
-    width: 100%;
-    padding: 15px;
-    background-color: var(--laranja);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.submit:hover {
-    transition: background-color 0.3s ease;
-}
-
-/* Estilo para o link da creche */
-.link_creche {
-    font-size: 16px;
-    text-decoration: none;
-    text-decoration: underline;
-}
-
-.link_creche:hover {
-    text-decoration: underline;
-    color: var(--laranja);
-    transition: color 0.3s ease;
-}
-.contact-info {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 18px;
-    color: #020202;
-}
-/* Menu Lateral */
 .menu-lateral {
     height: 100%;
     width: 0;
@@ -140,7 +79,7 @@ textarea {
     background-color: var(--azul_marinho);
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 70px; /* Aumente o padding-top para dar mais espaço ao botão de fechar */
+    padding-top: 70px; 
     box-shadow: 3px 0 15px rgba(0, 0, 0, 0.3);
     font-family: 'Encode Sans Expanded', sans-serif;
 }
@@ -150,12 +89,12 @@ textarea {
     top: 1px;
     right: 20px;
     font-size: 25px;
-    color: var(--bege); /* Cor do texto */
-    background: none; /* Remove o fundo */
-    border: none; /* Remove a borda */
+    color: var(--bege); 
+    background: none; 
+    border: none; 
     cursor: pointer;
     transition: color 0.3s;
-    z-index: 10; /* Certifique-se de que o botão fique acima do conteúdo */
+    z-index: 10; 
 }
 
 .menu-lateral a {
@@ -176,6 +115,38 @@ textarea {
     background-color: var(--laranja);
     color: var(--azul_marinho);
     transform: scale(1.05);
+}
+
+.quadro {
+    background-color: var(--verde);
+    color: var(--azul_marinho);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px; 
+    margin: 20px auto; 
+    text-align: center; 
+}
+
+.quadro h2 {
+    margin-top: 0;
+}
+
+.quadro p {
+    margin: 10px 0; 
+}
+
+.botao-agendar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--laranja);
+    color: white; 
+    text-align: center;
+    text-decoration: none; 
+    border-radius: 5px;
+    font-size: 16px; 
+    margin-top: 20px; 
+    transition: background-color 0.3s; 
 }
 footer {
     background-color: var(--verde);

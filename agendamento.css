@@ -10,7 +10,8 @@ body {
     background-color: var(--bege);
     margin: 0;
     padding: 0;
-}   
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
 
 header {
     display: flex;
@@ -24,21 +25,29 @@ header {
     border-bottom: 3px solid #333;
 }
 
+main {
+    padding-top: 400px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
 .link_menu {
     font-size: 16px;
     background-color: var(--verde);
     text-decoration: none;
-    border: #392f5a;
+    border: 1px solid var(--azul_marinho);
     border-radius: 25px;
-    border-style: solid;
     padding: 10px;
-    color: var(--azul_marinho);
-}
-:hover.link_menu{
-    background-color: var(--bege);
     color: var(--azul_marinho);
     transition: background-color 0.7s ease, transform 0.5s ease;
 }
+
+.link_menu:hover {
+    background-color: var(--laranja);
+    color: var(--azul_marinho);
+}
+
 .titulo {
     font-size: 28px;
 }
@@ -49,88 +58,7 @@ header {
     cursor: pointer;
 }
 
-.form-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 120px); /* Adiciona altura mínima ao contêiner */
-    padding: 50px 0; /* Adiciona espaçamento em cima e embaixo */
-}
 
-.form-container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px var(--azul_marinho);
-    width: 30%;
-    margin: 20px; /* Adiciona espaço externo ao redor do formulário */
-    margin-top: 20px;
-}
-
-h2 {
-    text-align: center;
-    color: var(--azul_marinho);
-    font-family: 'Playfair Display';
-    margin-bottom: 20px;
-    font-size: 28px;
-}
-
-label {
-    display: block;
-    margin-bottom: 10px;
-    color: var(--azul_marinho);
-    font-weight: 600;
-    font-size: 22px;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-textarea {
-    height: 100px;
-}
-
-.submit {
-    width: 100%;
-    padding: 15px;
-    background-color: var(--laranja);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.submit:hover {
-    transition: background-color 0.3s ease;
-}
-
-/* Estilo para o link da creche */
-.link_creche {
-    font-size: 16px;
-    text-decoration: none;
-    text-decoration: underline;
-}
-
-.link_creche:hover {
-    text-decoration: underline;
-    color: var(--laranja);
-    transition: color 0.3s ease;
-}
-.contact-info {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 18px;
-    color: #020202;
-}
-/* Menu Lateral */
 .menu-lateral {
     height: 100%;
     width: 0;
@@ -139,10 +67,11 @@ textarea {
     left: 0;
     background-color: var(--azul_marinho);
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 70px; /* Aumente o padding-top para dar mais espaço ao botão de fechar */
+    transition: width 0.5s; 
+    padding-top: 70px;
     box-shadow: 3px 0 15px rgba(0, 0, 0, 0.3);
     font-family: 'Encode Sans Expanded', sans-serif;
+    z-index: 20;             
 }
 
 .menu-lateral .fechar {
@@ -150,12 +79,15 @@ textarea {
     top: 1px;
     right: 20px;
     font-size: 25px;
-    color: var(--bege); /* Cor do texto */
-    background: none; /* Remove o fundo */
-    border: none; /* Remove a borda */
+    color: var(--bege);
+    background: none;
+    border: none;
     cursor: pointer;
     transition: color 0.3s;
-    z-index: 10; /* Certifique-se de que o botão fique acima do conteúdo */
+}
+
+.menu-lateral .fechar:hover {
+    color: var(--laranja);
 }
 
 .menu-lateral a {
@@ -167,15 +99,93 @@ textarea {
     margin: 10px 0;
     background-color: var(--verde);
     transition: 0.3s;
-    text-align: center;
 }
-.menu-lateral .fechar:hover {
-    color: var(--amarelo);
-}
+
 .menu-lateral a:hover {
     background-color: var(--laranja);
     color: var(--azul_marinho);
     transform: scale(1.05);
+}
+
+.container {
+    max-width: 600px;
+    padding-top: 400px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333333;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-top: -10px;
+    color: #666666;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    color: #333333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: var(--laranja);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(255, 81, 0);
+}
+
+.contact-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #333333;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 5px 0;
 }
 footer {
     background-color: var(--verde);
@@ -242,3 +252,4 @@ footer {
     font-size: 14px;
     text-align: center;
 }
+
