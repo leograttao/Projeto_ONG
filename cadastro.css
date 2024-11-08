@@ -62,7 +62,7 @@ form.perguntas{
     border: 2px solid #ccc;        /* Borda da caixa */
     border-radius: 10px;           /* Arredondamento dos cantos */
     background-color: #f9f9f9;     /* Cor de fundo */
-    color: #333;                   /* Cor do texto */
+    color: #3d3d3d;                   /* Cor do texto */
     font-size: 16px;               /* Tamanho da fonte */
     text-align: center;/* Alinha o texto ao centro */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */

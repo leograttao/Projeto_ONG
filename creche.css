@@ -10,7 +10,7 @@ body {
     background-color: var(--bege);
     margin: 0;
     padding: 0;
-}   
+}
 
 header {
     display: flex;
@@ -64,7 +64,7 @@ header {
     box-shadow: 0 0 10px var(--azul_marinho);
     width: 30%;
     margin: 20px; /* Adiciona espaço externo ao redor do formulário */
-    margin-top: 20px;
+    margin-top: 120px;
 }
 
 h2 {

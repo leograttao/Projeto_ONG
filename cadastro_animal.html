@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro_animal.css">
+    <title>Cadastro de animal</title>
+</head>
+<body>
+    <header>
+        <button class="botao_hamburguer" onclick="toggleMenu()">
+            <img src="img/image 2.png" width="55" height="50" alt="Menu">
+        </button>
+        <div class="titulo">PATAS SOLIDÁRIAS</div>
+        <a class="link_menu" href="login.html">Entrar/Cadastrar</a>
+    </header>
+
+<!-- Menu Lateral -->
+<div id="menuLateral" class="menu-lateral">
+    <a href="javascript:void(0)" class="fechar" onclick="toggleMenu()">&times;</a>
+    <a href="principal.html">Página Principal</a>
+    <a href="contato.html">Adote um animal</a>    
+    <a href="cadastrar_animal.html">Doar animal</a>
+    <a href="antes_depois.html">Antes/Depois dos animais</a>
+    <a href="creche_conhecer.html">Creche</a>
+    <a href="contato.html">Veterinário</a>
+    <a href="colaboracao.html">Faça uma doação para a ONG</a>
+    <a href="sobre_nos.html">Sobre Nós</a>
+</div>
+
+    <h2>Cadastro de animal</h2>
+    
+    <form class="informacoes" action="cadastro_animal.php" method="POST" enctype="multipart/form-data">
+        Nome: <input type="text" name="name" id="txtName" class="jose" required> <br><br>
+        
+        Tipo: 
+        <select name="tipo" id="tipo" class="jose" required>
+            <option value="">Selecione</option>
+            <option value="gato">Gato</option>
+            <option value="cachorro">Cachorro</option>
+        </select> 
+        <br><br>
+
+        Raça: 
+        <select name="raca" id="raca" class="jose" required>
+            <option value="">Selecione</option>
+        </select> 
+        <br><br>
+
+        Temperamento: 
+        <select name="temperamento" id="temperamento" class="jose" required>
+            <option value="selecione_temperamento">Selecione</option>
+            <option value="calmo">Calmo</option>
+            <option value="agitado">Agitado</option>
+            <option value="nervoso">Nervoso</option>
+            <option value="amigavel">Amigável</option>
+        </select> 
+        <br><br>
+
+        Tamanho: 
+        <select name="tamanho" id="tamanho" class="jose" required>
+            <option value="selecione_porte">Selecione</option>
+            <option value="pequeno">Pequeno</option>
+            <option value="medio">Médio</option>
+            <option value="grande">Grande</option>
+        </select> 
+        <br><br>
+
+        Idade: <input type="number" name="idade" class="jose" required min="0" max="17"> <br>
+
+        Necessita espaço? <br>
+        <input type="radio" value="Sim" name="necessita_espaco" id="sim" class="jose" required>Sim
+        <input type="radio" value="Não" name="necessita_espaco" id="nao" class="jose" required>Não <br>
+
+        <div class="caixa-upload">
+            Foto: 
+            <input type="file" name="foto" id="foto" accept="image/*" class="jose" onchange="mostrarMiniatura()"> <br>
+            <div class="miniatura-container">
+                <img id="miniatura" alt="Pré-visualização da imagem" style="display: none;">
+            </div>
+        </div>
+
+        Comentários: <input type="text" name="comentarios" size="30" class="jose" >
+
+        <input type="submit" class="cadastrar" name="submit" value="Enviar">
+    </form>
+
+    <script>
+        function toggleMenu() {
+    const menuLateral = document.getElementById("menuLateral");
+    if (menuLateral.style.width === "250px") {
+        menuLateral.style.width = "0";
+    } else {
+        menuLateral.style.width = "250px";
+    }
+}
+        const tipo = document.getElementById('tipo');
+        const raca = document.getElementById('raca');
+
+        
+        const racasGato = [
+            { value: 'persa', text: 'Persa' },
+            { value: 'siames', text: 'Siamês' },
+            { value: 'outra_raca', text: 'Outro' }
+        ];
+
+        const racasCachorro = [
+            { value: 'golden', text: 'Golden' },
+            { value: 'Bulldog', text: 'Bulldog' },
+            { value: 'corgi', text: 'corgi' },
+            { value: 'pinscher', text: 'Pinscher' },
+            { value: 'vira-lata', text: 'vira-lata' },
+            { value: 'salsicha', text: 'salsicha' },
+            { value: 'outra_raca', text: 'Outro' }
+        ];
+
+        
+        function atualizarRacas() {
+            racaSelect.innerHTML = '<option value="">Selecione</option>';
+            
+            let racas = tipoAnimal.value === 'gato' ? racasGato : tipoAnimal.value === 'cachorro' ? racasCachorro : [];
+
+            for (let i = 0; i < racas.length; i++) {
+                const option = document.createElement('option');
+                option.value = racas[i].value;
+                option.text = racas[i].text;
+                racaSelect.appendChild(option);
+            }
+        }
+
+        
+        tipo.addEventListener('change', atualizarRacas);
+        function mostrarMiniatura() {
+        const fotoInput = document.getElementById('foto');
+        const miniatura = document.getElementById('miniatura');
+
+        
+        if (fotoInput.files && fotoInput.files[0]) {
+            const reader = new FileReader();
+            
+           
+            reader.onload = function(e) {
+                miniatura.src = e.target.result;  
+                miniatura.style.display = 'block'; 
+            };
+
+            // Lê o arquivo como uma URL de dados
+            reader.readAsDataURL(fotoInput.files[0]);
+        }
+    }
+
+    </script>
+</body>
+</html>

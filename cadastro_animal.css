@@ -1,0 +1,184 @@
+:root {
+    --amarelo: #f4d06f;
+    --laranja: #ff8811;
+    --verde: #9dd9d2;
+    --bege: #fff8f0;
+    --azul_marinho: #392f5a;
+}
+
+body {
+    background-color: var(--bege);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    background-color: var(--verde);
+    height: 120px;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Playfair Display';
+    color: var(--azul_marinho);
+    border-bottom: 3px solid #333;
+}
+
+.link_menu {
+    font-size: 16px;
+    background-color: var(--verde);
+    text-decoration: none;
+    border: #392f5a;
+    border-radius: 25px;
+    border-style: solid;
+    padding: 10px;
+    color: var(--azul_marinho);
+}
+:hover.link_menu{
+    background-color: var(--bege);
+    color: var(--azul_marinho);
+    transition: background-color 0.7s ease, transform 0.5s ease;
+}
+.titulo {
+    font-size: 28px;
+}
+
+.botao_hamburguer {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Montserrat";
+}
+
+form.informacoes {
+    width: 600px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: var(--bege);
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    font-family: "Montserrat";
+}
+
+.jose {
+    width: 370px;
+    padding: 10px;
+    border: 2px solid var(--laranja);
+    border-radius: 20px;
+    font-size: 16px;
+    color: #2c3e50;
+    background-color: var(--bege);
+    margin: 5px auto;
+    display: block;
+}
+
+select.jose {
+    appearance: none;
+    background-color: var(--bege);
+    color: #2c3e50;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid var(--laranja);
+    width: 390px;
+    font-size: 16px;
+    font-family: "Montserrat";
+    text-align-last: center;
+    cursor: pointer;
+}
+
+.cadastrar {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--laranja);
+    color: var(--bege);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+}
+
+.cadastrar:hover {
+    background-color: #c66f18;
+    transition: background-color 0.7s ease, transform 0.5s ease;
+}
+
+/* Adicione estas classes para a pré-visualização da miniatura */
+.caixa-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.miniatura-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--laranja);
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+#miniatura {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+/* Menu Lateral */
+.menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--azul_marinho);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 70px; /* Aumente o padding-top para dar mais espaço ao botão de fechar */
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+.menu-lateral .fechar {
+    position: absolute;
+    top: 1px;
+    right: 20px;
+    font-size: 25px;
+    color: var(--bege); /* Cor do texto */
+    background: none; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 10; /* Certifique-se de que o botão fique acima do conteúdo */
+}
+
+.menu-lateral a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--azul_marinho);
+    display: block;
+    margin: 10px 0;
+    background-color: var(--verde);
+    transition: 0.3s;
+    text-align: center;
+}
+.menu-lateral .fechar:hover {
+    color: var(--amarelo);
+}
+.menu-lateral a:hover {
+    background-color: var(--laranja);
+    color: var(--azul_marinho);
+    transform: scale(1.05);
+}
